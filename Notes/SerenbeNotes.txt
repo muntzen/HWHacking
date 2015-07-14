@@ -1,0 +1,27 @@
+Hardware hackin!
+
+# Videos
+* Great series of YouTube videos with explanations of things from Gaven MacDonald - https://www.youtube.com/user/updowndown/videos
+ * Great intro to GPIO and the power rail - https://www.youtube.com/watch?v=wwgmgobDqms
+ * Lighting an LED - https://www.youtube.com/watch?v=UApKArED3JU
+ * Controlling an LED - https://www.youtube.com/watch?v=J9cEAGTLaC8
+* Tutorial on LEDs and GPIO - https://www.youtube.com/watch?v=ZNNpoLFbL9E
+
+* AdaFruit tutorials - https://learn.adafruit.com/category/learn-raspberry-pi
+ * AdaFruit tutorial on LCD Python library https://learn.adafruit.com/character-lcd-with-raspberry-pi-or-beaglebone-black
+
+# Calculating resistence - http://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-resistor-color-code-5-band
+
+# The VFD I bought - http://www.adafruit.com/products/347
+ * Some code that might work with it https://github.com/adafruit/SPI_VFD
+ 
+# Kit I purchased - http://www.amazon.com/gp/product/B00HU0Z4C2
+ * C code for the kit I purchased https://github.com/sunfounder/Sunfounder_SuperKit_C_code_for_RaspberryPi
+
+# RPi GPIO project documenetation - http://sourceforge.net/p/raspberry-gpio-python/wiki/Home/
+  This is the Python libraries that support communication with the GPIO pins on the device, so I can CONTROL ALL THE THINGS
+  
+# LCD Displays
+  * Raspberry Pi Adafruit https://learn.adafruit.com/character-lcd-with-raspberry-pi-or-beaglebone-black
+  * Python Library https://github.com/adafruit/Adafruit_Python_CharLCD
+  
