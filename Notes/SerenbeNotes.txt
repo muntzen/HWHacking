@@ -25,3 +25,5 @@ Hardware hackin!
   * Raspberry Pi Adafruit https://learn.adafruit.com/character-lcd-with-raspberry-pi-or-beaglebone-black
   * Python Library https://github.com/adafruit/Adafruit_Python_CharLCD
   
+# C Library, with some Python wrappers (THANK FUCKING GOD) that the kit I bought from Amazon builds things with, need for the C 
+headers to be installed: http://wiringpi.com/
