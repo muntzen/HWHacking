@@ -1,0 +1,4 @@
+#!/bin/sh
+#build the little led blinky C program
+gcc led.c -o led -lwiringPi
+
