@@ -12,6 +12,8 @@ try:
         r = requests.get('https://boxscoremania.com/api/game-status', verify=False)
         gamestate = r.json()
         display.output(gamestate)
+except KeyboardInterrupt:
+    display.clear()
 except:
     display.clear()
 

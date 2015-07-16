@@ -5,17 +5,17 @@ try:
 except RuntimeError:
     print("Error, you prolly need some extra permissions")
 
-pin = 12
+pins = [11, 13, 15, 16, 18, 22, 24]
 
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(pin, GPIO.OUT)
-GPIO.output(pin, True)
+GPIO.setup(pins, GPIO.OUT)
+GPIO.output(pins, True)
 time.sleep(2);
-GPIO.output(pin, False) 
+GPIO.output(pins, False) 
 time.sleep(2);
-GPIO.output(pin, True) 
+GPIO.output(pins, True) 
 time.sleep(2);
-GPIO.output(pin, False) 
+GPIO.output(pins, False) 
 
 GPIO.cleanup()
 

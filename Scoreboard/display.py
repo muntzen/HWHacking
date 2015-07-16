@@ -19,7 +19,7 @@ import RPi.GPIO as GPIO
 
 class Display:
     ''' Class that handles communicating with the display elements on the Pi from the data from the server '''
-    def __init__(self)
+    def __init__(self):
         GPIO.setmode(GPIO.BOARD)
         # TODO: Read config with the gpio pin numbers for everything into instance vars
         GPIO.setup([11, 13, 15], GPIO.OUT)
@@ -54,3 +54,5 @@ class Display:
     def lightOuts(self, outs):
         print "light up the first {} out indicators".format(outs)
 
+    def clear(self):
+        GPIO.cleanup()
