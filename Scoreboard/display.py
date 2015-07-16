@@ -22,7 +22,7 @@ class Display:
     def __init__(self):
         GPIO.setmode(GPIO.BOARD)
         # TODO: Read config with the gpio pin numbers for everything into instance vars
-        GPIO.setup([11, 13, 15], GPIO.OUT)
+        GPIO.setup([11, 13, 15, 16, 18, 22, 24], GPIO.OUT)
 
     def output(self, gamestate):
         if gamestate['current_status']['active'] == 'Y':
@@ -30,7 +30,7 @@ class Display:
             self.lightStrikes(gamestate['current_status']['strikes'])
             self.lightOuts(gamestate['current_status']['outs'])
         else:
-            print 'not active game'
+            print 'not active game, need to handle setting up the next poll interval'
 
     def lightBalls(self, balls):
         on = []
@@ -49,10 +49,30 @@ class Display:
         GPIO.output(on, True)
 
     def lightStrikes(self, strikes):
-        print "light up the first {} strike indicators".format(strikes)
+        on = []
+        off = []
+        if strikes == 0:
+            off = [16, 18]
+        elif strikes == 1:
+            off = [16]
+            on = [18]
+        else:
+            on = [16, 18]
+        GPIO.output(off, False)
+        GPIO.output(on, True)
 
     def lightOuts(self, outs):
-        print "light up the first {} out indicators".format(outs)
+        on = []
+        off = []
+        if outs == 0:
+            off = [22, 24]
+        elif outs == 1:
+            on = [24]
+            off = [22]
+        else:
+            on = [22, 24]
+        GPIO.output(off, False)
+        GPIO.output(on, True)
 
     def clear(self):
         GPIO.cleanup()

@@ -3,15 +3,18 @@
 
 import sys
 import requests
+import time
 from display import Display
 
 
 display = Display()
 try:
-    while(True):
+    while(True): #TODO: figure out the right way to poll and control state around that
         r = requests.get('https://boxscoremania.com/api/game-status', verify=False)
         gamestate = r.json()
         display.output(gamestate)
+        time.sleep(2)
+
 except KeyboardInterrupt:
     display.clear()
 except:
